@@ -56,7 +56,6 @@ p5.TiledMap = function(mapname, imagepath, transparentoffset) {
         var n, x, y, p, tileN;
         var offsetx = layer.offsetx || 0;
         var offsety = layer.offsety || 0;
-        var dif = floor((this.mapwidth + this.mapheight) * this.tilewidth / 4);
         var xstart = max(0, floor(this.canvasToMap(this.camleft, this.camtop).x - this.drawmargin));
         var xstop = min(this.mapwidth, ceil(this.canvasToMap(this.camleft + pg.width, this.camtop + pg.height).x + this.drawmargin));
         var ystart = max(0, floor(this.canvasToMap(this.camleft + pg.width, this.camtop).y - this.drawmargin));
