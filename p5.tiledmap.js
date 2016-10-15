@@ -17,7 +17,6 @@
  *  What's not working (and maybe never will):
  *    Loading TMX files - p5.tiledMap uses Tiled JavaScript export, which must be loaded previously.
  *    External TileSets - must be imported to be part of JavaScript export.
- *    Opacity (bug #1311 [https://github.com/processing/p5.js/issues/1311]).
  *    Tiles renderorder is not considered - always renders "right-down".
  *    Objects draworder is not considered.
  *  It's advisable to export Tiled maps to the same folder - pay attention to images path on js!
@@ -338,8 +337,6 @@ p5.prototype.loadTiledMap = function () {
  *  Canvas (or the off-screen graphics buffer) IS NOT CLEARED BEFORE (that's up to you).
  *  That means you can draw several layers on a buffer, but the layer opacity will affect all
  *  layers drawn before.
- *  Opacity not working until bug #1311 [https://github.com/processing/p5.js/issues/1311]
- *  is fixed.
  *
  *  @method drawLayer
  *  @param  {Number}   layer                 Layer Index.
