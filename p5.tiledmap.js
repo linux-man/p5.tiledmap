@@ -504,7 +504,7 @@ p5.TiledMap.prototype.getVersion = function() {
 }
 
 /**
- *  @method getVersion
+ *  @method getOrientation
  *  @return {String}                        Map Orientation
  */
 
