@@ -1,4 +1,4 @@
-#p5.tiledmap
+# p5.tiledmap
 
 Add Tiled maps to p5.js.
 
@@ -18,7 +18,7 @@ This program is free software: you can redistribute it and/or modify
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-#How to use it:
+# How to use it:
 
 p5.tiledmap is a port of Ptmx (https://github.com/linux-man/ptmx) to p5.js. Most methods are unchanged.
 
