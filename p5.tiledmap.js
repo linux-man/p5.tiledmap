@@ -325,6 +325,7 @@ p5.prototype.loadTiledMap = function () {
   if (!TileMaps) throw "No Tiled Map found!";
   if (!TileMaps[mapname]) throw "No Tiled Map named "+mapname+" found!";
   var t =  new p5.TiledMap(mapname, imagepath, transparentoffset);
+  if (typeof self._decrementPreload === 'function') self._decrementPreload(); //Direct calls to _decrementPreload from all loading functions (0.5.12^)
   if (typeof(callback) === 'function') callback(t);
   return t;
 }
