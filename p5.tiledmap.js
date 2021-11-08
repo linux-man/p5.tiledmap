@@ -14,7 +14,7 @@
 /**
  *  p5.tiledmap
  *  Add Tiled Maps to your sketch.
- *  What's not working (and maybe never will):
+ *  What's not working (and may never will):
  *    Loading TMX files - p5.tiledMap uses Tiled JavaScript export, which must be loaded previously.
  *    External TileSets - must be imported to be part of JavaScript export.
  *    Tiles renderorder is not considered - always renders "right-down".
@@ -343,7 +343,7 @@ p5.prototype.loadTiledMap = function () {
  *  @param  {Number}   layer                 Layer Index.
  *  @param  {Number}   camLeft               Left Coordinate.
  *  @param  {Number}   camTop                Top Coordinate.
- *  @param  {Object}   [pg]                  off-screen graphics buffer.
+ *  @param  {Object}   [pg]                  Off-screen graphics buffer.
  *  @example
  *  <div><code>
  *  function preload() {
@@ -443,7 +443,7 @@ p5.TiledMap.prototype.drawLayer = function(n, x, y, pg) {
 
 /**
  *  draw() draws a TiledMap.
- *  Visible property is respected.
+ *  Layer Visible property is respected.
  *  Opacity is ignored.
  *  The use of a off-screen graphics buffer is optional.
  *  Canvas (or the off-screen graphics buffer) IS NOT CLEARED BEFORE.
@@ -451,7 +451,7 @@ p5.TiledMap.prototype.drawLayer = function(n, x, y, pg) {
  *  @method draw
  *  @param  {Number}   camLeft               Left Coordinate.
  *  @param  {Number}   camTop                Top Coordinate.
- *  @param  {Object}   [pg]                  off-screen graphics buffer.
+ *  @param  {Object}   [pg]                  Off-screen graphics buffer.
  *  @example
  *  <div><code>
  *  function preload() {
@@ -576,7 +576,7 @@ p5.TiledMap.prototype.getCamCenter = function() {
 }
 
 /**
- *  Depending on dramMode, returns the camera corner or center coordinates.
+ *  Depending on drawMode, returns the camera corner or center coordinates.
  *  Depending on positionMode, returns the Map or Canvas coordinates.
  *  Essentially, you get the coordinates of last draw.
  *
@@ -599,14 +599,15 @@ p5.TiledMap.prototype.getCamSize = function() {
 }
 
 /**
- *  Only useful for some pre-draw calculations, since Cam size is always the last Canvas used to draw.
+ *  Only useful for some pre-draw calculations, since CamSize is always the last Canvas used to draw.
  *
  *  @method setCamSize
  *  @param  {P5.Vector}   (width, height)
  */
 /**
-*  Only useful for some pre-draw calculations, since Cam size is always the last Canvas used to draw.
-*
+ *  Only useful for some pre-draw calculations, since Cam size is always the last Canvas used to draw.
+ *
+ *  @method setCamSize
  *  @param  {Number}   width
  *  @param  {Number}   height
  */
@@ -650,8 +651,8 @@ p5.TiledMap.prototype.getDrawMode = function() {
 }
 
 /**
- *  Defines the meaning of draw and drawLayer coordinates.
- *  Tradicionally, they are camLeft and camTop - the left/top coordinates of the camera,
+ *  Define the meaning of draw and drawLayer coordinates.
+ *  By default, they are camLeft and camTop - the left/top coordinates of the camera,
  *  but with setDrawMode(CENTER), they become the coordinates of the camera center.
  *
  *  @method setDrawMode
@@ -672,8 +673,8 @@ p5.TiledMap.prototype.getPositionMode = function() {
 }
 
 /**
- *  Defines the meaning of draw and drawLayer coordinates.
- *  Tradicionally, the coordinates are read as pixel position.
+ *  Define the meaning of draw and drawLayer coordinates.
+ *  By default, the coordinates are read as pixel position,
  *  but with setPositionMode("MAP"), they become Tiles Coordinates.
  *
  *  @method setPositionMode
@@ -812,6 +813,7 @@ p5.TiledMap.prototype.setOpacity = function(n, o) {
  *  - 0 is an empty tile.
  *  - The stored tile index is the index indicated by Tiled +1.
  *
+ *  @method getTileIndex
  *  @param  {Number}   layer                 Layer Index.
  *  @param  {p5.Vector}   v                  Coordinates.
  *  @return {Number}                         Tile Index.
@@ -862,7 +864,7 @@ p5.TiledMap.prototype.setTileIndex = function(n, a, b, c) {
 }
 
 /**
- *  Convertion Methods between the 3 coordinate systems in use:
+ *  Conversion Methods between the 3 coordinate systems in use:
  *  MAP (Tile coordinates), CANVAS (Pixel coordinates) and CAM (relative coordinates of the draw)
  */
 
