@@ -20,7 +20,9 @@ This program is free software: you can redistribute it and/or modify
 
 # How to use it:
 
-p5.tiledmap is a port of Ptmx (https://github.com/linux-man/ptmx) to p5.js. Most methods are unchanged.
+p5.tiledmap is a port of [Ptmx](https://github.com/linux-man/ptmx) to p5.js.
+
+[WIKI (WIP)](https://github.com/linux-man/p5.tiledmap/wiki)
 
 Read the examples.
 
